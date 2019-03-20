@@ -5,7 +5,7 @@ import { Observable } from "rxjs/Observable";
 @Injectable()
 export class ProductService {
 // cloud
-  public url =`13.233.208.167:9080/bankING/`
+  public url =`http://13.233.208.167:9080/bankING/`
   // public url =`http://10.117.189.22:8080/`
 
 
@@ -22,5 +22,13 @@ getProductSer():Observable<any>{
   let url = `${this.url}api/v1/groups`
     return this._http.get(url);
 }
+
+// getSeleProSer(proId):Observable<any>{
+//    // let url = `${this.baseUrl}products`
+
+//    let url = `${this.url}api/v1/groups${proId}`
+//    return this._http.get(url);
+
+// }
 
 }

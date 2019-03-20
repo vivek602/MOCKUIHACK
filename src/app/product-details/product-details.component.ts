@@ -1,5 +1,7 @@
 import { Component, OnInit,OnChanges } from '@angular/core';
 import { ShareDataService } from '../share-data.service';
+import { ProductService } from '../product.service';
+
 
 
 @Component({
@@ -9,10 +11,12 @@ import { ShareDataService } from '../share-data.service';
 })
 export class ProductDetailsComponent implements OnInit{
 
-  constructor(private data:ShareDataService) { }
+  constructor(private data:ShareDataService, private ser:ProductService ) { }
   selectedRow=[];
   selectedObj=[];
   latestIndex:number;
+
+  seletedId:number;
 
   ngOnInit() {
     this.data.currentMessage.subscribe(data => {
@@ -21,11 +25,15 @@ export class ProductDetailsComponent implements OnInit{
     })
 
     this.getSelected();
+
   }
 
 
 
-
+getSelectedProDetails(){
+  this.seletedId = this.selectedObj[0].productId;
+  // this.ser.
+}
 
   getSelected(){
       // alert(this.latestIndex)
