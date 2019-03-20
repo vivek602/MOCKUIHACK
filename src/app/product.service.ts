@@ -5,8 +5,9 @@ import { Observable } from "rxjs/Observable";
 @Injectable()
 export class ProductService {
 // cloud
-  public url =`13.233.208.167:9080/bankING`
+  public url =`13.233.208.167:9080/bankING/`
   // public url =`http://10.117.189.22:8080/`
+
 
   constructor(private _http:HttpClient) { }
   httpOptions = {
@@ -17,7 +18,8 @@ export class ProductService {
 public baseUrl=`http://localhost:3000/`;
 getProductSer():Observable<any>{
   // let url = `${this.baseUrl}products`
-  let url = `${this.url}/api/v1/groups`
+
+  let url = `${this.url}api/v1/groups`
     return this._http.get(url);
 }
 

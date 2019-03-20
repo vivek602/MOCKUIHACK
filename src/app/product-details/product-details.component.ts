@@ -28,7 +28,7 @@ export class ProductDetailsComponent implements OnInit{
 
 
   getSelected(){
-      alert(this.latestIndex)
+      // alert(this.latestIndex)
       this.selectedObj.push(this.selectedRow[0]) ;
 
   }
