@@ -9,13 +9,20 @@ import { CommonModule } from '@angular/common';
 import { AppRouteModule } from './app-route/app-route.module';
 import { RouterModule } from '@angular/router';
 import { MenuComponent } from './menu/menu.component';
-
+import { ProductsComponent } from './products/products.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
+import { AnalyticsComponent } from './analytics/analytics.component';
+import { ProductService } from './product.service';
+import { ShareDataService } from './share-data.service';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent
+    MenuComponent,
+    ProductsComponent,
+    ProductDetailsComponent,
+    AnalyticsComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +33,7 @@ import { MenuComponent } from './menu/menu.component';
     AppRouteModule,
     RouterModule
   ],
-  providers: [],
+  providers: [ProductService,ShareDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

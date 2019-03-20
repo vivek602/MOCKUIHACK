@@ -13,6 +13,67 @@
       "postId": 1
     }
   ],
+  "products":[
+    {
+      "groupName": "Savings",
+      "groupId": 1,
+      "productName": [
+        {
+          "productId": 10,
+          "productName": "Annuity"
+
+        }
+      ]
+    },
+    {
+      "groupName": "Payments",
+      "groupId": 2,
+      "productName": [
+        {
+          "productId": 11,
+          "productName": "Payment Account"
+        },
+        {
+          "productId": 11,
+          "productName": "Annuity"
+        },
+        {
+          "productId": 11,
+          "productName": "Debit card"
+        },
+        {
+          "productId": 11,
+          "productName": "Quaterly limit"
+        },
+        {
+          "productId": 11,
+          "productName": "Continuly limit"
+        }
+      ]
+    },
+    {
+      "groupName": "Mortgage",
+      "groupId": 3,
+      "productName": [
+        {
+          "productId": 13,
+          "productName": "Bank saving Mortgage"
+        },
+        {
+          "productId": 14,
+          "productName": "Interest-only"
+        },
+        {
+          "productId": 15,
+          "productName": "Annuty"
+        },
+        {
+          "productId": 16,
+          "productName": "Linear"
+        }
+      ]
+    }
+  ],
   "profile": {
     "name": "typicode"
   }
