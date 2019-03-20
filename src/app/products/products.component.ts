@@ -20,9 +20,10 @@ export class ProductsComponent implements OnInit {
     this.ser.getProductSer().subscribe(data => this.allProduct = data)
   }
 
-  details(e,data){
+  details(e,data,i){
     console.log(data);
-    (this.data.changeMessage(data));
+    data['index']=i;
+    (this.data.changeMessage(data,i));
 
   }
 }

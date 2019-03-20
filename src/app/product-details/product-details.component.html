@@ -4,9 +4,33 @@
 
   <div class="col-sm-8 col-sm-offset-2">
     <h2 class="text-center text-success">Product Details</h2>
-    <h3 class="text-center">Selected Product group</h3>
-
     <hr>
+          <div *ngFor="let data of selectedObj; let i=index">
+            <h3>{{data.groupName}}</h3>
+
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>Product Name</th>
+                  <th> Product Type</th>
+                  <th>Balance</th>
+                  <th>Max Limit</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let obj of data.productName; let i=index">
+                    <td>{{obj.productName }}</td>
+                    <td>{{obj.product_type }}</td>
+                    <td>{{obj.balance }}</td>
+                    <td>{{obj.max_limit  }}</td>
+
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+
+
 
 
     <div class="panel-group" id="accordion">
@@ -23,7 +47,8 @@
             <div class="panel-body" >
 
             <ul class="list-inline"  *ngFor="let obj of pro.productName; let i=index">
-              <li >{{obj.productName}} </li>
+              <li >{{obj.productName}}</li>
+              <!-- *ngIf="i==!selectedRow[0].index" -->
             </ul>
             </div>
           </div>
@@ -34,4 +59,12 @@
 
 
 </div>
-<!-- {{selectedRow | json}} -->
+<!-- {{selectedRow[0].index | json}}
+
+{{selectedObj | json }}
+
+{{selectedRow |json}} -->
+<!-- {{this.selectedRow[0].index}} -->
+<!-- {{latestIndex}}
+
+{{selectedObj |json}} -->

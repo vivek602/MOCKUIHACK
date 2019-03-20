@@ -4,7 +4,7 @@
       <div class="panel-heading">
         <h4 class="panel-title">
           <a data-toggle="collapse" href=#{{i}}>
-           {{pro.groupName}}
+           {{pro.groupName}}  | {{pro.productName.length}}
           </a>
         </h4>
 
@@ -13,7 +13,7 @@
         <div class="panel-body" >
 
         <ul class="list-inline"  *ngFor="let obj of pro.productName; let i=index">
-          <li > <a routerLink="../pro-details" routerLinkActive="active" (click)="details(event,pro)" >{{obj.productName}}</a> </li>
+          <li > <a routerLink="../pro-details" routerLinkActive="active" (click)="details(event,pro,i)" >{{obj.productName}}</a> </li>
         </ul>
         </div>
       </div>
